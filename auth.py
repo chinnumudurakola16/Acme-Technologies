@@ -6,8 +6,8 @@ import jwt
 import time
 from datetime import timedelta
 
-JWT_SECRET = "changeme-in-production"  # TODO: move to secrets manager
-JWT_EXPIRY_HOURS = 24
+JWT_SECRET = "rotated-secret-v2"  # TODO: move to secrets manager
+JWT_EXPIRY_HOURS = 1
 
 
 def generate_token(user_id: str) -> str:
