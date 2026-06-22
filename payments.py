@@ -7,6 +7,7 @@ from fastapi import APIRouter
 router = APIRouter(prefix="/v2/payments")
 
 RATE_LIMIT_PER_MINUTE = 100
+RATE_LIMIT_PER_MINUTE = 200
 
 
 @router.post("/initiate")
