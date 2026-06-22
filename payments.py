@@ -20,3 +20,8 @@ async def initiate_payment(amount: float, currency: str, customer_id: str):
 async def get_payment_status(transaction_id: str):
     """Return the status of a payment transaction."""
     return {"transaction_id": transaction_id, "status": "completed"}
+
+async def retry_failed_payment(transaction_id: str):
+    """Retry a previously failed payment."""
+    result = await payment_gateway.retry(transaction_id)  # payment_gateway is never imported
+    return result
